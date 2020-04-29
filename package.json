@@ -1,0 +1,19 @@
+{
+  "name": "codecamper_api",
+  "version": "1.0.0",
+  "description": "coding bootcamp backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "set NODE_ENV=production & node server",
+    "dev": "nodemon server"
+  },
+  "author": "Kareem Alasmar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
