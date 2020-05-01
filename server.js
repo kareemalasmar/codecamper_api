@@ -19,6 +19,9 @@ const bootcamps = require('./routes/bootcamps');
 
 const app = express();
 
+// Body Parser
+app.use(express.json());
+
 // Example custom logger
 // app.use(logger);
 
