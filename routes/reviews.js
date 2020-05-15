@@ -1,5 +1,5 @@
 const express = require('express');
-const { getReviews } = require('../controllers/reviews');
+const { getReviews, getReview } = require('../controllers/reviews');
 
 const Review = require('../models/Review');
 
@@ -15,11 +15,7 @@ router.route('/').get(
   }),
   getReviews
 );
-//   .post(protect, authorize('publisher', 'admin'), addCourse);
-// router
-//   .route('/:id')
-//   .get(getCourse)
-//   .put(protect, authorize('publisher', 'admin'), updateCourse)
-//   .delete(protect, authorize('publisher', 'admin'), deleteCourse);
+
+router.route('/:id').get(getReview);
 
 module.exports = router;
