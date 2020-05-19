@@ -89,6 +89,9 @@ exports.updateReview = asyncHandler(async (req, res, next) => {
     runValidators: true,
   });
 
+  // Allow average rating to be updated
+  await review.save();
+
   res.status(200).json({
     success: true,
     data: review,
